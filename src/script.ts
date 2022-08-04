@@ -127,7 +127,7 @@ import { Rendering } from "./animation/rendering";
         passengerDrawing.position.set(
           (options.doorSize + options.doorMargin * 2) * carIndex +
             options.doorMargin +
-            offset * ((passengerIndex + 1) % rows),
+            offset * ((passengerIndex % rows) + 1),
           options.passengerHeight / 2,
           -options.elevatorDepth +
             offset * (Math.floor(passengerIndex / rows) + 1)
